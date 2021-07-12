@@ -105,7 +105,7 @@ if __name__ == '__main__':
         return_list=True,
         collate_fn=batchify_fn)
 
-    # Define the model netword and its loss
+    # Define the model network and its loss
     model = ErnieForTokenClassification.from_pretrained(
         "ernie-1.0", num_classes=len(label_vocab))
     metric = ChunkEvaluator(label_list=label_vocab.keys(), suffix=True)
