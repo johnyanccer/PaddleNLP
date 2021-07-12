@@ -103,7 +103,7 @@ if __name__ == '__main__':
         return_list=True,
         collate_fn=batchify_fn)
 
-    # Define the model netword and its loss
+    # Define the model network and its loss
     ernie = ErnieForTokenClassification.from_pretrained(
         "ernie-1.0", num_classes=len(label_vocab))
     model = ErnieCrfForTokenClassification(ernie)
